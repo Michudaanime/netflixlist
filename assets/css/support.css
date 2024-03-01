@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+body
+{
+    background-color: rgb(255, 255, 255);
+    margin: 0; 
+    font-family: 'Poppins', sans-serif;  
+}
+
+.row
+{
+    margin: 0px;
+    padding: 0;
+}
+
+.col-4, .col-12
+{
+    margin: 0px;
+    padding: 0;
+}
+
+/*header*/
+.header
+{
+    margin: 0;
+    padding: 0;
+}
+
+#title p
+{
+    text-align: center;
+    color: red;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    margin: 10px;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.navigation
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navigation li
+{
+    list-style: none;
+    margin: 15px 0 0 0;
+}
+
+.navigation li a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+}
+
+.navigation li a:hover
+{
+    color: red;
+    transition: 0.7s;
+}
+
+#activeS
+{
+    color: red;
+}
+
+#activeS:hover
+{
+    color: white;
+    transition: 0.7s;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button.SignUp, button.Login
+{   
+    color: white;
+    background: linear-gradient(#e66465, #9198e5);
+    border: none;
+    margin: 15px 10px 0 10px;
+    padding: 0 12px 0 12px;
+}
+
+.buttons .settings{
+  height: 25px;
+  margin: 0 30px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.buttons a img
+{
+    margin: 15px 0 0 0;
+    height: 25px;
+}
+
+#pic
+{
+    width: 100%;
+    height: 100vh;
+    background-image:  linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(https://www.pixelstalk.net/wp-content/uploads/2016/08/Best-HD-Moving-Images.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*content*/
+.accordion 
+{
+  width: 90%;
+  max-width: 1000px;
+  max-height: 520px;
+  margin: 2rem auto;
+  padding: 20px;
+  /*background-image: url(https://images.unsplash.com/photo-1526813677553-58ec9003a71d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTh8MjEwODkzN3x8ZW58MHx8fHw%3D&w=1000&q=80);*/
+  margin-top: 10vh;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar 
+{
+  width: 0px;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.accordion-item 
+{
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.accordion-item2
+{
+  background-color: black;
+  color: white;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.accordion-item-header2
+{
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.accordion-item-header2 a
+{
+    color: red;
+}
+
+.accordion-item-header2 a:hover
+{
+    text-decoration: none;
+}
+
+.accordion-item-header 
+{
+  width: 100%;
+  padding: 0.5rem 3rem 0.5rem 1rem;
+ min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.accordion-item-header p, .accordion-item-header2 p
+{
+    margin: 0;
+    text-align: center;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+.accordion-item-body-content p
+{
+    text-align: center;
+}
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/*footer*/
+.footer
+{   
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translate(-50%, -2%);
+    color: red;
+    text-align: center;
+    margin: 25px 0 0 0;
+    padding: 0;
+}

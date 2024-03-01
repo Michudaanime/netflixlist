@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(68, 68, 68);
+    margin: 0; 
+    font-family: 'Poppins', sans-serif;  
+}
+
+.row
+{
+    margin: 0px;
+    padding: 0;
+}
+
+.col-4, .col-12
+{
+    margin: 0px;
+    padding: 0;
+}
+
+/*header*/
+.header
+{
+    margin: 0;
+    padding: 0;
+}
+
+#title p
+{
+    text-align: center;
+    color: red;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    margin: 10px;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.navigation
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navigation li
+{
+    list-style: none;
+    margin: 15px 0 0 0;
+}
+
+.navigation li a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+}
+
+.navigation li a:hover
+{
+    color: red;
+    transition: 0.7s;
+}
+
+#activeL
+{
+    color: red;
+}
+
+#activeL:hover
+{
+    color: white;
+    transition: 0.7s;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button.SignUp, button.Login
+{   
+    color: white;
+    background-color: red;
+    border: none;
+    margin: 15px 10px 0 10px;
+    padding: 0 12px 0 12px;
+}
+
+.buttons .settings{
+  height: 25px;
+  margin: 0 30px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+.buttons img
+{
+    margin: 15px 0 0 0;
+    height: 25px;
+}
+
+/*searchbar*/
+
+  .search-box{
+    width: fit-content;
+    height: fit-content;
+    /*position: relative;*/
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+  }
+
+  .input-search
+  {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: red;
+    padding-right: 40px;
+    color:#fff;
+  }
+  .input-search::placeholder
+  {
+    color:rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search
+  {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;  
+
+  }
+  .btn-search:focus ~ .input-search
+  {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid red;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus
+  {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid red;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+  .filter h1
+  {
+    float: left;
+    margin: 15px;
+    color: white;
+  }
+
+  .filter a
+  {
+      float: left;
+      background-color: rgb(97, 0, 0);
+      border: solid 2px rgb(97, 0, 0);
+      border-radius: 10px;
+      color: white;
+      margin: 20px;
+      padding: 5px 10px 5px 10px;
+  }
+
+  .filter a:hover
+  {
+      border: solid 2px white;
+      text-decoration: none;
+  }
+
+  .filter form select
+  {
+      background-color: rgb(97, 0, 0);
+      border: solid 2px rgb(97, 0, 0);
+      border-radius: 10px;
+      text-align: center;
+      margin: 20px;
+      padding: 5px 10px 5px 10px;
+      color: white;
+      cursor: pointer;
+  }
+
+/*movies*/
+
+.movies a:hover{
+  text-decoration: none;
+}
+
+.movies
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.movie
+{   
+    height: 100%;
+    width: 302px;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.movie:hover
+{
+  transform: scale(0.9);
+}
+
+.movie-title
+{
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.movie-img
+{
+  width: 300px;
+  height: 450px;
+}
+
+
+/*MODAL*/
+.modal 
+{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content 
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.modal-header h2, .modal-footer h3 
+{
+  margin: 0;
+}
+
+.modal-header 
+{
+  background-color: red;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.modal-title
+{
+  text-align: center;
+}
+
+.modal-body 
+{
+  padding: 10px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.modal-body img
+{
+  padding: 10px 20px;
+  width: 170px;
+  height: 225px;
+  float: left;
+}
+
+.modal-body p
+{
+  color: black;
+  text-align: center;
+}
+.modal-body h4
+{
+  color: black;
+  text-align: center;
+}
+
+.modal-footer 
+{
+  background-color: red;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  justify-content: space-between;
+}
+
+#addBtn
+{
+    padding: 10px;
+    border: solid 2px black;
+    background-color: white;
+    color: black;
+}
+
+.close 
+{
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+  float: right;
+}
+
+.close:hover, .close:focus 
+{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen 
+{
+  from 
+  {
+    opacity: 0;
+  }
+  to 
+  {
+    opacity: 1;
+  }
+}
+
+/*footer*/
+.footer
+{   
+    color: red;
+    text-align: center;
+    margin: 25px 0 0 0;
+    padding: 0;
+}
+
