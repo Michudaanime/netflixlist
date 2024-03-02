@@ -5,17 +5,18 @@ error_reporting(E_ALL);
 session_start();
 require './app/controllers/Db.php';
 
-
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['id'])) 
+{
     header('Location: /rocnikovy/profile');
     exit();
 }
 
-
 Db::connect('127.0.0.1', 'rocnikovy', 'root', '');
 $chyba = '';
-if (isset($_POST['login'])) {
-    if ($_POST['username'] && $_POST['password']) {
+if (isset($_POST['login'])) 
+{
+    if ($_POST['username'] && $_POST['password']) 
+    {
         $username = trim($_POST['username']);
         $password = $_POST['password'];
 
@@ -25,14 +26,19 @@ if (isset($_POST['login'])) {
                     FROM users
                     WHERE `username`=?', $username);
 
-        if (!$user || !password_verify($password, $user['password'])) {
+        if (!$user || !password_verify($password, $user['password'])) 
+        {
             $chyba = 'Your e-mail or password is incorrect';
-        } else {
+        } 
+        else 
+        {
             $_SESSION['id'] = $user['id'];
             header('Location: /rocnikovy/profile');
             exit();
         }
-    } else {
+    } 
+    else 
+    {
         $chyba = 'All fields must be filled out';
     }
 }
